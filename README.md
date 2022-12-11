@@ -1,16 +1,43 @@
-# flutter_application_5
+# Практическая работа №5
 
-A new Flutter project.
+## Тема: закрепление ранее полученных знаний.
 
-## Getting Started
+## Цель работы: реализовать передачу данных между экранами. Реализовать передачу данных через параметр arguments и сохранение данных в SharedPrefrences. Реализовать восстановление данных после закрытия приложения. Если есть данные в SharedPrefrences открыть 2 экран, если данных нет, то открыть 1 экран. Так же реализовать восстановление темы приложения. 
 
-This project is a starting point for a Flutter application.
+## Ход работы: 
 
-A few resources to get you started if this is your first Flutter project:
+1.	Добавим зависимость для работы SharedPreferences:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Изображение с Imgur. Пункт 1](https://i.imgur.com/KeFSeV9.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2.	В main.dart пропишем следующий код, в котором создадим класс, в котором будем осуществляться проверка на наличие записи о выбранной теме в SharedPreferences и если запись есть, то тема будет выбрана для приложения:
+
+![Изображение с Imgur. Пункт 2](https://i.imgur.com/HFCyPTj.png)
+
+3.	В этом же классе пропишем код build для обращения к виджету Screen1:
+
+![Изображение с Imgur. Пункт 3](https://i.imgur.com/yOZ8XQH.png)
+
+4.	Создадим файл Screen1.dart:
+
+![Изображение с Imgur. Пункт 4](https://i.imgur.com/aIg7iGD.png)
+
+5.	В созданном файле пропишем код для инициализации виджета. В зависимости от того, будет ли значение в SharedPreferences откроется виджет 1 или 2:
+
+![Изображение с Imgur. Пункт 5](https://i.imgur.com/4oscsMF.png)
+
+6.	Далее пропишем код вёрстки виджета 1, где есть кнопка смены темы, поле ввода и кнопка для перехода на виджет 2 с передачей значения в данный виджет:
+
+![Изображение с Imgur. Пункт 6](https://i.imgur.com/1YSUtQY.png)
+
+7.	Создадим файл Screen2.dart:
+
+![Изображение с Imgur. Пункт 7](https://i.imgur.com/JjQGj5F.png)
+
+8.	В созданном файле пропишем код для вывода значения, который записан в SharedPreferences или, если аргумент не равен null, то значение из аргумента:
+
+9.	Результат:
+
+![Изображение с Imgur. Пункт 9](https://i.imgur.com/mX4HpwO.png)
+
+## Вывод: в рамках данной практической работы закреплены ранее полученные навыки в разработке на dart flutter. Реализована передача данных между экранами. Реализована передача данных через параметр arguments и сохранение данных в SharedPrefrences. Реализовано восстановление данных после закрытия приложения. Если есть данные в SharedPrefrences открыть 2 экран, если данных нет, то открыть 1 экран. Так же реализовать восстановление темы приложения.
